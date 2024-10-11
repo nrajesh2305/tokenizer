@@ -4,7 +4,7 @@ import random
 import pyttsx3
 
 # Correctly unpack all four returned values from process_file
-python_categorized, python_total, cpp_categorized, cpp_total = process_file("test.txt")
+python_categorized, python_total = process_file("test.txt")
 
 random_phrases = [
     "ACCESSING THE MAINFRAME", "DEPLOYING ENEMY VEHICLES", 
@@ -24,7 +24,7 @@ for i in range(10):
 
 clean_code_and_ignore_comments("test.txt")
 
-choice = input("Would you like to see any of the tokenized versions y/n (Python/C++)?\n")
+choice = input("Would you like to see the tokenized version y/n?\n")
 print("Regardless whatever you mean by that, clear or not, I am gonna show the Python Tokenized Table.")
 
 for i in range(10):
@@ -32,7 +32,7 @@ for i in range(10):
     time.sleep(random.randint(1, 3))
 
 if python_categorized:
-    display_table(python_categorized, python_total, "Python")
+    display_table(python_categorized, python_total)
 
 time.sleep(5)
 print("YOU THOUGHT I WAS DONE, HAHAHA. ONE LAST CHANCE")
@@ -41,9 +41,6 @@ time.sleep(10)
 for i in range(10):
     print(random_phrases[random.randint(0, len(random_phrases) - 1)] + "...")
     time.sleep(random.randint(1, 3))
-
-if cpp_categorized:
-    display_table(cpp_categorized, cpp_total, "C++")
 
 print("Fine I'm done, you win. Or do you?")
 
