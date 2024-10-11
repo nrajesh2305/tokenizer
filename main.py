@@ -3,7 +3,6 @@ import time
 import random
 import pyttsx3
 
-# Correctly unpack all four returned values from process_file
 python_categorized, python_total = process_file("test.txt")
 
 random_phrases = [
